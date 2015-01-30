@@ -18331,7 +18331,9 @@ var React = require('react');
 module.exports = React.createClass({displayName: "exports",
   render: function() {
     return (
-      React.createElement("div", {classNames: "HerokuStatusLight"}, this.props.statusType, ": ", this.props.currentStatus)
+      React.createElement("div", {classNames: "HerokuStatusLight"}, 
+        this.props.statusType, ": ", this.props.currentStatus
+      )
     );
   }
 });
@@ -18347,7 +18349,7 @@ module.exports = React.createClass({displayName: "exports",
 
     for (var prop in this.props.status) {
       statuses.push({statusType: prop, currentStatus: this.props.status[prop]});
-    };
+    }
 
     var statusNodes = statuses.map(function(status) {
       return (
