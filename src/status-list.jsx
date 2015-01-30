@@ -7,7 +7,7 @@ module.exports = React.createClass({
 
     for (var prop in this.props.status) {
       statuses.push({statusType: prop, currentStatus: this.props.status[prop]});
-    };
+    }
 
     var statusNodes = statuses.map(function(status) {
       return (
